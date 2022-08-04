@@ -1,0 +1,136 @@
+:root {
+  --color: #181819;
+  --background: white;
+  --link: #181819;
+  --primary: purple;
+  --secondary: #770c44;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  transition: all 0.3s;
+  color: var(--color);
+  font-family: sans-serif;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background: var(--background);
+}
+  body.dark {
+    --color: #cecece;
+    --background: #181819;
+    --link: white;
+    --primary: purple;
+    --secondary: #770c44;
+  }
+
+nav {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+}
+  nav a:hover {
+    background: var(--link);
+    color: var(--background);
+  }
+
+article {
+  padding: 3rem 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+  article header {
+    background: var(--primary);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+    article header * {
+      color: var(--background);
+    }
+    article header:hover {
+      background: var(--secondary);
+    }
+    article header:hover * {
+      transition: all 0.6s ease-in-out;
+    }
+    article header:hover h2 {
+      margin-left: 1rem;
+    }
+    article header:hover h3 {
+      margin-left: 2rem;
+    }
+    article header:hover h4 {
+      margin-left: 3rem;
+    }
+    article header:hover h5 {
+      margin-left: 4rem;
+    }
+    article header:hover h6 {
+      margin-left: 5rem;
+    }
+
+  article p {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+  footer p {
+    width: auto;
+    text-align: center;
+  }
+    footer p a {
+      text-decoration: none;
+    }
+      footer p a:hover {
+        text-decoration: underline;
+      }
+
+  footer button {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+  }
+    footer button:hover {
+      transform: translateY(-15px);
+    }
+
+    footer button img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
